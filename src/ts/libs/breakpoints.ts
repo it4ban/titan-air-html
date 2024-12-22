@@ -1,15 +1,13 @@
 import $ from 'jquery';
 
-export const getWindowWidth = (callback: (width: number) => void) => {
-	callback(window.innerWidth);
+export const getWindowWidth = () => {
+	let width = window.innerWidth;
 
 	const handleWindowResize = () => {
-		callback(window.innerWidth);
+		width = window.innerWidth;
 	};
 
 	$(window).on('resize', handleWindowResize);
 
-	return () => {
-		$(window).off('resize', handleWindowResize);
-	};
+	return { width: () => width };
 };
