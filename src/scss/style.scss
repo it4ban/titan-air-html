@@ -2,18 +2,51 @@
 @use 'mixins';
 
 // BLOCKS
+@use 'blocks/logo';
+@use 'blocks/contacts-icon';
+@use 'blocks/lang-switcher';
 @use 'blocks/button';
 @use 'blocks/category-block';
 @use 'blocks/social-icon';
+@use 'blocks/search-form';
+
+//HOME HEADER
+
+.header-home {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 4;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 28px;
+		padding-left: 35px;
+		padding-right: 41px;
+	}
+
+	&__right {
+		display: flex;
+		gap: 60px;
+
+		svg path {
+			fill: vars.$blue;
+		}
+	}
+}
 
 // HOME
-// .home {
-// 	width: 100%;
-// 	overflow: hidden;
-// 	@media (pointer: coarse) and (hover: none) {
-// 		overflow: auto;
-// 	}
-// }
+.home {
+	width: 100%;
+	overflow: hidden;
+
+	@media (pointer: coarse) and (hover: none) {
+		overflow: auto;
+	}
+}
 
 .one-screen,
 .two-screen,

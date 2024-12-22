@@ -83,13 +83,13 @@ body {
 
 .variant-light {
 	path {
-		fill: #fff;
+		fill: #fff !important;
 	}
 }
 
 .variant-dark {
 	path {
-		fill: vars.$blue;
+		fill: vars.$blue !important;
 	}
 }
 

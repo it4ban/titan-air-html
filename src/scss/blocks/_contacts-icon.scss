@@ -1,0 +1,14 @@
+@use '../vars';
+
+.contacts-link {
+	transition: all vars.$transition;
+	svg path {
+		fill: vars.$blue;
+	}
+
+	&--light {
+		svg path {
+			fill: vars.$light;
+		}
+	}
+}

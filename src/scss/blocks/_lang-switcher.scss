@@ -1,0 +1,78 @@
+@use '../vars';
+@use '../mixins';
+
+.lang {
+	position: relative;
+
+	&__wrapper {
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2px;
+	}
+
+	&__current {
+		color: vars.$light;
+		z-index: 2;
+		font-size: 18px;
+		font-weight: bold;
+		transition: all vars.$transition;
+
+		&--darken {
+			color: vars.$blue;
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		z-index: 2;
+		transition: all vars.$transition;
+
+		&--rotate {
+			transform: rotate(180deg);
+
+			svg path {
+				fill: vars.$light;
+			}
+		}
+	}
+}
+
+.lang-variants {
+	z-index: -1;
+	border-radius: 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+	width: 50px;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: all vars.$transition;
+	padding: 5px;
+	background-color: vars.$darkBlue;
+
+	&--open {
+		height: 142px;
+		opacity: 1;
+		z-index: 1;
+	}
+
+	&__value {
+		color: vars.$light;
+		font-size: 18px;
+		font-weight: bold;
+		width: 40px;
+		height: 40px;
+
+		@include mixins.hover {
+			background-color: #2e4461;
+		}
+	}
+}
