@@ -1,0 +1,281 @@
+@use 'reset';
+@use 'vars';
+@use 'mixins';
+
+body {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: vars.$blue;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.xs-container {
+	width: 100%;
+	max-width: 986px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.small-header {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: vars.$blue;
+}
+
+.contrast-header {
+	color: vars.$yellow;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.underline {
+	width: 100%;
+	height: 1px;
+	background-color: vars.$gray;
+}
+
+.icon {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background-color: vars.$darkBlue;
+	border-radius: 50%;
+	transition: vars.$transition;
+
+	svg path {
+		transition: all vars.$transition;
+	}
+
+	@include mixins.hover {
+		background-color: vars.$dark;
+
+		.lang__current {
+			color: vars.$light;
+		}
+
+		svg path {
+			fill: vars.$light !important;
+		}
+	}
+
+	&--transparent {
+		background-color: transparent;
+
+		@include mixins.hover {
+			background-color: vars.$dark;
+		}
+	}
+}
+
+.variant-light {
+	path {
+		fill: #fff;
+	}
+}
+
+.variant-dark {
+	path {
+		fill: vars.$blue;
+	}
+}
+
+.modal-field,
+.modal-area {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		padding: 0 50px;
+
+		@media (max-width: 798px) {
+			gap: 10px;
+		}
+
+		@media (max-width: 520px) {
+			padding: 0 20px;
+		}
+	}
+
+	&__input-wrapper {
+		grid-column: 7 span;
+
+		@media (max-width: 670px) {
+			grid-column: 12 span;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		border: 1px solid #b3b3b3;
+		border-radius: 3px;
+		padding: 0 35px 0 22px;
+		font-weight: 400;
+		color: vars.$blue;
+
+		transition: border 0.2s ease-in-out;
+
+		&:active,
+		&:focus {
+			border: 1px solid vars.$darkBlue;
+		}
+	}
+}
+
+.modal-field {
+	&__input-wrapper {
+		position: relative;
+
+		&:has(.error) {
+			.modal-field__input {
+				border-color: #ec3a3a;
+
+				&:active,
+				&:focus {
+					+ .error .error__message {
+						opacity: 1;
+						bottom: -38px;
+						z-index: 4;
+						width: 240px;
+
+						@media (max-width: 366px) {
+							width: 180px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__input {
+		height: 45px;
+	}
+}
+
+.modal-area {
+	.field-header {
+		align-self: auto !important;
+	}
+
+	&__input {
+		grid-column: 7 span;
+		padding: 10px 22px 15px;
+		outline: none;
+		resize: none;
+	}
+}
+
+.error {
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	transform: translateY(-50%);
+	z-index: 4;
+
+	&__message {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: vars.$light;
+		width: 0;
+		border-radius: 10px;
+		height: auto;
+		z-index: -3;
+		opacity: 0;
+		padding: 10px;
+		border: 1px solid vars.$blue;
+		color: #ec3a3a;
+		font-size: 14px;
+		overflow-x: hidden;
+		text-wrap: nowrap;
+		transition: all vars.$transition;
+	}
+}
+
+.sidebar-right {
+	&__contacts-list {
+		padding: 21px 30px 32px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: column;
+		gap: 21px;
+	}
+
+	&__socials-icons {
+		display: flex;
+		align-items: center;
+		gap: 43px;
+
+		@media (max-width: 398px) {
+			gap: 25px;
+		}
+
+		svg {
+			path {
+				fill: vars.$blue;
+			}
+		}
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
+
+.contact-item {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+
+	&__header {
+		font-size: 18px;
+		line-height: 139%;
+		font-weight: 700;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		gap: 22px;
+	}
+
+	&__info {
+		font-weight: 400;
+		font-size: 14px;
+		color: #1d2d42;
+
+		&--email {
+			text-decoration: underline !important;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	color: vars.$blue;
+	transition: all vars.$transition;
+}
+
+button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
