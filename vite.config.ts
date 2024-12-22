@@ -11,6 +11,27 @@ export default {
 				main: resolve(__dirname, 'index.html'),
 				about: resolve(__dirname, 'pages/about/index.html'),
 			},
+			output: {
+				assetFileNames: (assetInfo) => {
+					const ext =
+						typeof assetInfo.name === 'string'
+							? assetInfo.name.split('.').pop()
+							: typeof assetInfo.source === 'string'
+							? assetInfo.source.split('.').pop()
+							: '';
+
+					if (!ext) return 'assets/';
+
+					if (ext === 'css') return 'css/[name].min[extname]';
+
+					if (['png', 'jpg', 'jpeg', 'svg', 'webp', 'gif', 'tiff'].includes(ext)) return 'img/[name]-[hash][extname]';
+					if (['woff', 'woff2', 'ttf', 'eot', 'otf'].includes(ext)) return 'fonts/[name]-min[extname]';
+
+					return 'assets/[name]-[hash][extname]';
+				},
+				chunkFileNames: 'js/[name].min.js',
+				entryFileNames: 'js/[name].min.js',
+			},
 		},
 	},
 	plugins: [

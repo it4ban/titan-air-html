@@ -130,7 +130,7 @@
 
 // ONE SCREEN
 .one-screen {
-	background-image: url('/home/main-bg-1.jpg');
+	background-image: url('../img/home/main-bg-1.jpg');
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -141,7 +141,7 @@
 	position: relative;
 
 	@include mixins.retina-bg {
-		background-image: url('/home/main-bg-1@2x.jpg');
+		background-image: url('../img/home/main-bg-1@2x.jpg');
 	}
 
 	&::before {
@@ -163,7 +163,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-image: url('/home/figure-1.png');
+		background-image: url('../img/home/figure-1.png');
 		background-repeat: no-repeat;
 		background-position: right;
 		background-size: 100% 105%;
@@ -173,7 +173,7 @@
 		transition: all 0.5s ease-in-out;
 
 		@include mixins.retina-bg {
-			background-image: url('/home/figure-1@2x.png');
+			background-image: url('../img/home/figure-1@2x.png');
 		}
 
 		@media (max-width: 590px) {
@@ -185,7 +185,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-image: url('/home/substract.png');
+		background-image: url('../img/home/substract.png');
 		background-repeat: no-repeat;
 		background-position: right;
 		background-size: 100% 105%;
@@ -195,7 +195,7 @@
 		transition: all 0.5s ease-in-out;
 
 		@include mixins.retina-bg {
-			background-image: url('/home/substract@2x.png');
+			background-image: url('../img/home/substract@2x.png');
 		}
 
 		@media (max-width: 590px) {
@@ -260,7 +260,7 @@
 
 // TWO SCREEN
 .two-screen {
-	background-image: url('/home/main-bg-2.jpg');
+	background-image: url('../img/home/main-bg-2.jpg');
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -271,7 +271,7 @@
 	position: relative;
 
 	@include mixins.retina-bg {
-		background-image: url('/home/main-bg-2@2x.jpg');
+		background-image: url('../img/home/main-bg-2@2x.jpg');
 	}
 
 	&__wrapper {
@@ -373,7 +373,7 @@
 
 // THREE SCREEN
 .three-screen {
-	background-image: url('/home/main-bg-3.jpg');
+	background-image: url('../img/home/main-bg-3.jpg');
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -384,7 +384,7 @@
 	position: relative;
 
 	@include mixins.retina-bg {
-		background-image: url('/home/main-bg-3@2x.jpg');
+		background-image: url('../img/home/main-bg-3@2x.jpg');
 	}
 
 	&__wrapper {
@@ -493,7 +493,7 @@
 
 // FOUR SCREEN
 .four-screen {
-	background-image: url('/home/main-bg-4.jpg');
+	background-image: url('../img/home/main-bg-4.jpg');
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -504,7 +504,7 @@
 	position: relative;
 
 	@include mixins.retina-bg {
-		background-image: url('/home/main-bg-4@2x.jpg');
+		background-image: url('../img/home/main-bg-4@2x.jpg');
 	}
 
 	&__wrapper {
@@ -569,7 +569,7 @@
 
 // FIVE SCREEN
 .five-screen {
-	background-image: url('/home/main-bg-5.jpg');
+	background-image: url('../img/home/main-bg-5.jpg');
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -580,7 +580,7 @@
 	position: relative;
 
 	@include mixins.retina-bg {
-		background-image: url('/home/main-bg-5@2x.jpg');
+		background-image: url('../img/home/main-bg-5@2x.jpg');
 	}
 
 	&__wrapper {
@@ -650,7 +650,7 @@
 
 // SIX SCREEN
 .six-screen {
-	background-image: url('/home/main-bg-6.jpg');
+	background-image: url('../img/home/main-bg-6.jpg');
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -661,7 +661,7 @@
 	position: relative;
 
 	@include mixins.retina-bg {
-		background-image: url('/home/main-bg-6@2x.jpg');
+		background-image: url('../img/home/main-bg-6@2x.jpg');
 	}
 
 	&__wrapper {

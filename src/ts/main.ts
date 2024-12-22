@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 import { screenScroll } from './libs/scroll';
-import { toggleSearchBar } from './libs/search';
 
 function handleChangeColor(index: number = 0) {
 	if (index > 0) {
@@ -36,8 +35,4 @@ $(() => {
 
 		handleChangeColor(getActiveSection());
 	});
-
-	let width = window.matchMedia('(max-width: 1120px)');
-
-	$('.search-form__icon').on('click', () => toggleSearchBar(width));
 });
