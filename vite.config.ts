@@ -22,7 +22,7 @@ export default {
 
 					if (!ext) return 'assets/';
 
-					if (ext === 'css') return 'css/[name].min[extname]';
+					if (ext === 'css') return 'css/[name][extname]';
 
 					if (['png', 'jpg', 'jpeg', 'svg', 'webp', 'gif', 'tiff'].includes(ext)) return 'img/[name]-[hash][extname]';
 					if (['woff', 'woff2', 'ttf', 'eot', 'otf'].includes(ext)) return 'fonts/[name][extname]';
