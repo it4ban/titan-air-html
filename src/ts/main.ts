@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 import { Menu } from './classes/menu';
+import { LangSwitcher } from './classes/LangSwitcher';
 
 import { screenScroll } from './libs/scroll';
 
@@ -28,6 +29,7 @@ function handleChangeColor(index: number = 0) {
 
 $(() => {
 	const menu = new Menu();
+	const langSwitcher = new LangSwitcher();
 
 	const { handleCalculateSectionOffset, handleMouseWheel, getActiveSection } = screenScroll();
 
@@ -46,4 +48,6 @@ $(() => {
 
 	$('.menu-gamburger').on('click', (e) => menu.open(e));
 	$('.close-mobile').on('click', (e) => menu.close(e));
+
+	$('.lang').on('click', () => langSwitcher.toggle());
 });
