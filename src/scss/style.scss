@@ -2,6 +2,8 @@
 @use 'mixins';
 
 // BLOCKS
+@use 'blocks/mobile-menu';
+@use 'blocks/header';
 @use 'blocks/logo';
 @use 'blocks/contacts-icon';
 @use 'blocks/lang-switcher';
@@ -12,12 +14,24 @@
 
 //HOME HEADER
 
+.header {
+	display: none;
+
+	@media (max-width: 1120px) {
+		display: block;
+	}
+}
+
 .header-home {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 4;
+
+	@media (max-width: 1120px) {
+		display: none;
+	}
 
 	&__wrapper {
 		display: flex;
