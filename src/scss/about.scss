@@ -1,0 +1,11 @@
+@use 'vars';
+@use 'mixins';
+
+// BLOCKS
+@use 'blocks/mobile-menu';
+@use 'blocks/menu-gamburger';
+@use 'blocks/header';
+@use 'blocks/logo';
+@use 'blocks/lang-switcher';
+@use 'blocks/social-icon';
+@use 'blocks/search-form';

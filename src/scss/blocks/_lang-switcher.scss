@@ -5,6 +5,18 @@
 	position: relative;
 	z-index: 3;
 
+	&:has(.lang-variants--open) {
+		.lang__current {
+			color: vars.$light;
+		}
+
+		.icon {
+			svg path {
+				fill: vars.$light !important;
+			}
+		}
+	}
+
 	&__wrapper {
 		z-index: 2;
 		display: flex;
@@ -18,7 +30,7 @@
 		z-index: 2;
 		font-size: 18px;
 		font-weight: bold;
-		transition: all 0.1s ease;
+		transition: all vars.$transition;
 
 		&--darken {
 			color: vars.$blue;

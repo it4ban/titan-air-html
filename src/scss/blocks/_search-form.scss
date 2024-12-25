@@ -80,7 +80,7 @@
 	transition: all vars.$transition;
 
 	&--open {
-		z-index: 3;
+		z-index: 6;
 		opacity: 1;
 		visibility: visible;
 	}

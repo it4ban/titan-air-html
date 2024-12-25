@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import { Menu } from './classes/menu';
+import { Menu } from './classes/Menu';
 import { LangSwitcher } from './classes/LangSwitcher';
 
 import { screenScroll } from './libs/scroll';
