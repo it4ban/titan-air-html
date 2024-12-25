@@ -1,0 +1,25 @@
+@use '../mixins';
+
+.banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  height: 400px;
+  padding-top: 100px;
+
+  @media (max-width: 420px) {
+    height: 350px;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+
+    @media (max-width: 576px) {
+      padding-top: 20px;
+    }
+  }
+}

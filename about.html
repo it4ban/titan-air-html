@@ -294,12 +294,37 @@
 
 		<main class="about-us">
 			<div class="about-us__wrapper">
-				<BannerItem :img="aboutUsImg" :imgX2="aboutUsImgX2" :bannerImage="aboutUsBanner" />
+				<section class="banner" style="background-image: url('/src/img/about-us/bg-top.jpg')">
+					<div class="container">
+						<ul class="breadcrumbs">
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Home</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="#" class="breadcrumbs__link breadcrumbs__link--active">About us</a>
+							</li>
+						</ul>
+
+						<div class="banner__img">
+							<img
+								src="/src/img/about-us/about-logo.png"
+								srcset="/src/img/about-us/about-logo@2x.png 2x"
+								loading="lazy"
+								alt="Plane"
+							/>
+						</div>
+					</div>
+				</section>
 
 				<div class="banner-description">
 					<div class="container">
 						<div class="banner-description__wrapper">
 							<TitleMulticolor title="About Us" :mainColor="'yellow'" :titleColor="'blue'" />
+
+							<p class="title-multicolor title-multicolor--yellow">
+								<span class="title-multicolor__accent title-multicolor__accent--blue">About</span>
+								Us
+							</p>
 
 							<p class="banner-description__text">
 								Titan Airservice AS" company, established in 2006, is a team of professionals providing airservices in
@@ -311,21 +336,21 @@
 							</p>
 
 							<div class="banner-description__bottom">
-								<ButtonItem variant="fill-contrast"> Contact Us </ButtonItem>
+								<button class="btn btn--fill-contrast">Contact Us</button>
 
 								<div class="banner-description__socials">
 									<p class="banner-description__socials-header">Social Networks:</p>
 
 									<div class="banner-description__socials-wrapper">
-										<SocialIcon href="/" variant="blue">
+										<a href="#" class="social-icon social-icon--blue">
 											<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
 													d="M9.47695 0.167479L7.34794 0.164062C4.95607 0.164062 3.41033 1.74995 3.41033 4.20453V6.06746H1.2697C1.08473 6.06746 0.934937 6.21742 0.934937 6.4024V9.10157C0.934937 9.28655 1.0849 9.43634 1.2697 9.43634H3.41033V16.2472C3.41033 16.4322 3.56012 16.582 3.7451 16.582H6.53801C6.72298 16.582 6.87278 16.432 6.87278 16.2472V9.43634H9.37567C9.56065 9.43634 9.71044 9.28655 9.71044 9.10157L9.71146 6.4024C9.71146 6.31358 9.6761 6.22853 9.61342 6.16567C9.55074 6.10282 9.46534 6.06746 9.37652 6.06746H6.87278V4.48823C6.87278 3.72919 7.05365 3.34387 8.04241 3.34387L9.47661 3.34335C9.66142 3.34335 9.81121 3.19339 9.81121 3.00858V0.502249C9.81121 0.317613 9.66159 0.16782 9.47695 0.167479Z"
 													fill="#1D2D42"
 												/>
 											</svg>
-										</SocialIcon>
-										<SocialIcon href="/" variant="blue">
+										</a>
+										<a href="#" class="social-icon social-icon--blue">
 											<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
 													d="M12.0512 0.164062H4.69481C2.19662 0.164062 0.164185 2.1966 0.164185 4.69479V12.0512C0.164185 14.5494 2.19662 16.5819 4.69481 16.5819H12.0512C14.5496 16.5819 16.582 14.5493 16.582 12.0512V4.69479C16.5821 2.1966 14.5496 0.164062 12.0512 0.164062ZM15.1254 12.0512C15.1254 13.7462 13.7464 15.1252 12.0513 15.1252H4.69481C2.99983 15.1253 1.62085 13.7462 1.62085 12.0512V4.69479C1.62085 2.99981 2.99983 1.62073 4.69481 1.62073H12.0512C13.7463 1.62073 15.1253 2.99981 15.1253 4.69479V12.0512H15.1254Z"
@@ -340,8 +365,8 @@
 													fill="#1D2D42"
 												/>
 											</svg>
-										</SocialIcon>
-										<SocialIcon href="/" variant="blue">
+										</a>
+										<a href="#" class="social-icon social-icon--blue">
 											<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_182_389)">
 													<path
@@ -360,15 +385,15 @@
 													</clipPath>
 												</defs>
 											</svg>
-										</SocialIcon>
-										<SocialIcon href="/" variant="blue">
+										</a>
+										<a href="#" class="social-icon social-icon--blue">
 											<svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
 													d="M16.582 2.28294C15.9777 2.55069 15.3293 2.73228 14.6481 2.81335C15.3437 2.39682 15.8761 1.73613 16.1285 0.951293C15.476 1.33703 14.7558 1.61713 13.9884 1.76897C13.3739 1.11341 12.4998 0.705078 11.5303 0.705078C9.67026 0.705078 8.16214 2.21319 8.16214 4.07217C8.16214 4.33582 8.19189 4.59333 8.24935 4.83957C5.45063 4.699 2.96893 3.35812 1.30795 1.32061C1.01761 1.81717 0.852435 2.39577 0.852435 3.0134C0.852435 4.18194 1.44748 5.21299 2.3503 5.81622C1.79834 5.79776 1.27922 5.64592 0.82475 5.39354V5.4356C0.82475 7.06682 1.9861 8.42821 3.52601 8.73806C3.24387 8.81398 2.94636 8.85605 2.63858 8.85605C2.4211 8.85605 2.21078 8.8345 2.00456 8.79346C2.43338 10.1323 3.67683 11.1059 5.15007 11.1326C3.99794 12.0354 2.54523 12.572 0.967361 12.572C0.695499 12.572 0.427715 12.5555 0.164062 12.5258C1.65474 13.483 3.42447 14.0411 5.32653 14.0411C11.5221 14.0411 14.9087 8.9094 14.9087 4.45895L14.8974 4.02294C15.5591 3.55098 16.1316 2.958 16.582 2.28294Z"
 													fill="#1D2D42"
 												/>
 											</svg>
-										</SocialIcon>
+										</a>
 									</div>
 								</div>
 							</div>
