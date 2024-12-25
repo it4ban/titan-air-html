@@ -12,18 +12,22 @@ export class LangSwitcher {
 
 	constructor() {
 		$('.lang-variants__value').on('click', (e: JQuery.ClickEvent) => {
-			const prevLang = $('.lang__current').last().text();
+			let prevLang = $('.lang__current').last().text();
 
 			this.langs.forEach((lang) => {
 				if ($(e.currentTarget).data('langKey') === lang) {
+					this.loadNewLang(lang);
+
 					$(e.currentTarget).attr('data-lang-key', prevLang.toLowerCase());
 					$('.lang__current').text($(e.currentTarget).text());
 					$(e.currentTarget).text(prevLang);
-				} else {
-					throw new Error('Unable to determine data attribute');
 				}
 			});
 		});
+	}
+
+	private loadNewLang(lang: string) {
+		console.log(lang);
 	}
 
 	private toggleState() {
@@ -42,6 +46,4 @@ export class LangSwitcher {
 		this.state = !this.state;
 		this.toggleState();
 	}
-
-	private translate() {}
 }
