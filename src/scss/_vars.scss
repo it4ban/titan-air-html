@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'AvenirNext';
+	src: url('../fonts/avenirNextDemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Black.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+$yellow: #ffcc01;
+$blue: #1d2d42;
+$darkBlue: #1c2939;
+$dark: #000;
+$grayLight: #f2f2f2;
+$light: #fff;
+$gray: #c4c4c4;
+
+$transition: 0.5s ease;

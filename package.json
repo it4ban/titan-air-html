@@ -1,0 +1,36 @@
+{
+	"name": "titan-air",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "gulp",
+		"build": "gulp build --production"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"autoprefixer": "^10.4.20",
+		"browser-sync": "^3.0.3",
+		"del": "^8.0.0",
+		"gulp": "^5.0.0",
+		"gulp-avif": "^1.1.1",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-mode": "^1.1.0",
+		"gulp-newer": "^1.4.0",
+		"gulp-noop": "^1.0.1",
+		"gulp-notify": "^5.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^10.0.0",
+		"gulp-sass": "^6.0.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-svg-sprite": "^2.0.3",
+		"gulp-ttf2woff2": "^5.0.0",
+		"gulp-uglify-es": "^3.0.0",
+		"jquery": "^3.7.1",
+		"pagepiling.js": "^1.5.6",
+		"sass": "^1.83.0"
+	}
+}
