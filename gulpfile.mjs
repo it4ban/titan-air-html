@@ -16,7 +16,6 @@ import sourceMap from 'gulp-sourcemaps';
 import { deleteAsync } from 'del';
 import gulpAvif from 'gulp-avif';
 import newer from 'gulp-newer';
-import svgSprite from 'gulp-svg-sprite';
 import ttf2woff2 from 'gulp-ttf2woff2';
 
 const JS_LIBS = ['./node_modules/jquery/dist/jquery.js', './node_modules/pagepiling.js/dist/jquery.pagepiling.js'];
@@ -24,16 +23,6 @@ const CSS_LIBS = ['./node_modules/pagepiling.js/dist/jquery.pagepiling.css'];
 
 const sass = gulpSass(dartSass);
 const bs = browserSync.create();
-
-const spriteConfig = {
-	mode: {
-		symbol: {
-			sprite: '../sprite.svg',
-			bust: false,
-			example: false,
-		},
-	},
-};
 
 const plumberNotify = (title) => {
 	return {
@@ -60,15 +49,8 @@ function images() {
 	return src(['src/images/src/**/*.png', 'src/images/src/**/*.jpg', '!src/images/', '!src/images/src/**/*.svg'], {
 		encoding: false,
 	})
-		.pipe(newer('./src/images/'))
+		.pipe(newer('./src/images'))
 		.pipe(gulpAvif())
-		.pipe(dest('./src/images'));
-}
-
-function sprites() {
-	return src(['src/images/src/**/*.svg', '!src/images/*.svg'], { encoding: false })
-		.pipe(newer('./src/images/*.svg'))
-		.pipe(svgSprite(spriteConfig))
 		.pipe(dest('./src/images'));
 }
 
@@ -162,7 +144,6 @@ function build() {
 }
 
 task('images', images);
-task('sprites', sprites);
 task('libsCSS', libsCSS);
 task('libsJS', libsJS);
 task('styles', styles);
@@ -174,15 +155,10 @@ task('build', build);
 
 task(
 	'default',
-	series('clean', parallel('libsCSS', 'libsJS'), parallel('styles', 'scripts', 'images', 'sprites', 'fonts', 'watch')),
+	series('clean', parallel('libsCSS', 'libsJS'), parallel('styles', 'scripts', 'images', 'fonts', 'watch')),
 );
 
 task(
 	'build',
-	series(
-		'clean',
-		parallel('libsCSS', 'libsJS'),
-		parallel('styles', 'scripts', 'images', 'sprites', 'fonts'),
-		parallel('build'),
-	),
+	series('clean', parallel('libsCSS', 'libsJS'), parallel('styles', 'scripts', 'images', 'fonts'), parallel('build')),
 );

@@ -1,0 +1,31 @@
+.img-scene {
+	grid-column: 6 span;
+	position: relative;
+
+	&__image {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__big-circle,
+	&__small-circle {
+		z-index: 1;
+		position: absolute;
+		left: 50%;
+		bottom: 50%;
+		transform: translate(-50%, 50%);
+		border-radius: 50%;
+	}
+
+	&__big-circle {
+		width: 421px;
+		height: 421px;
+		background-color: rgba(35, 54, 79, 0.6);
+	}
+
+	&__small-circle {
+		width: 312px;
+		height: 312px;
+		background-color: rgba(69, 92, 125, 0.3);
+	}
+}

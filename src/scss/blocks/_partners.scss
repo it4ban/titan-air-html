@@ -1,0 +1,33 @@
+.partners {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: 780px) {
+			row-gap: 20px;
+		}
+	}
+
+	&__block {
+		grid-column: 2 span;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		@media (max-width: 780px) {
+			grid-column: 4 span;
+		}
+
+		@media (max-width: 398px) {
+			img {
+				max-width: 120px;
+			}
+		}
+	}
+}

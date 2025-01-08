@@ -1,0 +1,58 @@
+@use '../vars';
+@use '../mixins';
+
+.menu-gamburger {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+
+	@include mixins.hover {
+		.menu-gamburger__line {
+			&:nth-child(odd) {
+				&::after {
+					width: 28px;
+				}
+			}
+
+			&:nth-child(even) {
+				&::after {
+					width: 23px;
+				}
+			}
+		}
+	}
+
+	&__line {
+		position: relative;
+		display: block;
+		width: 40px;
+		height: 4px;
+		background-color: #455c7d;
+
+		&::after {
+			content: '';
+			transition: all 0.3s ease;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 4px;
+			background-color: vars.$light;
+		}
+
+		&:nth-child(odd) {
+			&::after {
+				width: 23px;
+			}
+		}
+
+		&:nth-child(even) {
+			&::after {
+				width: 28px;
+			}
+		}
+	}
+}

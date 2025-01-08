@@ -1,0 +1,49 @@
+@use '../vars';
+@use '../mixins';
+
+.social-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid transparent;
+
+	&--yellow,
+	&--blue {
+		transition: all vars.$transition;
+
+		svg path {
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&--yellow {
+		border: 1px solid vars.$yellow;
+
+		@include mixins.hover {
+			background-color: vars.$yellow;
+
+			svg path {
+				fill: vars.$blue;
+			}
+		}
+	}
+
+	&--blue {
+		border: 1px solid vars.$blue;
+		svg path {
+			fill: vars.$blue;
+		}
+
+		@include mixins.hover {
+			border-color: transparent;
+			background-color: vars.$yellow;
+
+			svg path {
+				fill: vars.$light;
+			}
+		}
+	}
+}
