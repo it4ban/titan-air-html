@@ -14,6 +14,8 @@
 @use 'blocks/contacts-link';
 @use 'blocks/icon';
 @use 'blocks/menu-gamburger';
+@use 'blocks/mobile-menu';
+@use 'blocks/header';
 
 body {
 	margin: 0 auto;
@@ -103,6 +105,16 @@ button {
 	overflow: auto;
 }
 
+.home {
+	.header {
+		display: none;
+
+		@media (max-width: 1344px) {
+			display: block;
+		}
+	}
+}
+
 #pagepiling {
 	.container,
 	.xs-container {
@@ -122,7 +134,7 @@ button {
 	width: 100%;
 	z-index: 7;
 
-	@media (max-width: 1120px) {
+	@media (max-width: 1344px) {
 		display: none;
 	}
 
@@ -154,7 +166,7 @@ button {
 	width: 88px;
 	z-index: 7;
 
-	@media (max-width: 970px) {
+	@media (max-width: 1344px) {
 		display: none;
 	}
 
@@ -175,6 +187,65 @@ button {
 		position: absolute;
 		top: 10px;
 		right: -26px;
+	}
+
+	.menu-gamburger {
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		width: inherit;
+		height: inherit;
+		background-color: transparent;
+
+		@include mixins.hover {
+			.menu-gamburger__line {
+				&:nth-child(odd) {
+					&::after {
+						width: 28px;
+					}
+				}
+
+				&:nth-child(even) {
+					&::after {
+						width: 23px;
+					}
+				}
+			}
+		}
+
+		&__line {
+			position: relative;
+			display: block;
+			width: 40px;
+			height: 4px;
+			background-color: #455c7d;
+
+			&::after {
+				content: '';
+				transition: all 0.3s ease;
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 4px;
+				background-color: vars.$light;
+			}
+
+			&:nth-child(odd) {
+				&::after {
+					width: 23px;
+				}
+			}
+
+			&:nth-child(even) {
+				&::after {
+					width: 28px;
+				}
+			}
+		}
 	}
 }
 

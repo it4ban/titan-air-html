@@ -1,15 +1,18 @@
 @use '../vars';
-@use '../mixins';
 
 .menu-gamburger {
 	cursor: pointer;
+	background-color: vars.$darkBlue;
+	width: 100px;
+	height: 100px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 5px;
+	transition: all 0.3s ease-in-out;
 
-	@include mixins.hover {
+	&:hover {
 		.menu-gamburger__line {
 			&:nth-child(odd) {
 				&::after {
