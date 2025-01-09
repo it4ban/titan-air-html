@@ -5,41 +5,54 @@ export class PageScroll {
 		this.#container = pagesContainer;
 	}
 
-	init() {
-		$(this.#container).pagepiling({
-			menu: null,
-			direction: 'vertical',
-			verticalCentered: true,
-			anchors: [],
-			scrollingSpeed: 700,
-			easing: 'swing',
-			loopBottom: false,
-			loopTop: false,
-			css3: true,
-			navigation: {
-				textColor: '#000',
-				bulletsColor: '#ffcc01',
-				position: 'right',
-				tooltips: ['Best partners', 'About us', 'Travel agency', 'Charter flights', 'Out partners', 'Contact us'],
-			},
-			normalScrollElements: null,
-			normalScrollElementTouchThreshold: 5,
-			touchSensitivity: 5,
-			keyboardScrolling: true,
-			sectionSelector: '.section',
-			animateAnchor: false,
-			onLeave: (currentIndex, nextIndex) => {
-				if (nextIndex > 1) {
-					$('.header-home .contacts-link').addClass('contacts-link--light');
-					$('.header-home .search-form__icon').addClass('search-form__icon--light');
-				} else {
-					$('.header-home .contacts-link').removeClass('contacts-link--light');
-					$('.header-home .search-form__icon').removeClass('search-form__icon--light');
-				}
+	#checkContainer(container) {
+		if (container.length === 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 
-				this.#addAnimation(nextIndex);
-			},
-		});
+	init() {
+		const isCheck = this.#checkContainer($(this.#container));
+
+		if (isCheck) {
+			$(this.#container).pagepiling({
+				menu: null,
+				direction: 'vertical',
+				verticalCentered: true,
+				anchors: [],
+				scrollingSpeed: 700,
+				easing: 'swing',
+				loopBottom: false,
+				loopTop: false,
+				css3: true,
+				navigation: {
+					textColor: '#000',
+					bulletsColor: '#ffcc01',
+					position: 'right',
+					tooltips: ['Best partners', 'About us', 'Travel agency', 'Charter flights', 'Out partners', 'Contact us'],
+				},
+				normalScrollElements: null,
+				normalScrollElementTouchThreshold: 5,
+				touchSensitivity: 5,
+				keyboardScrolling: true,
+				sectionSelector: '.section',
+				animateAnchor: false,
+				onLeave: (_, nextIndex) => {
+					if (nextIndex > 1) {
+						$('.header-home .contacts-link').addClass('contacts-link--light');
+						$('.header-home .search-form__icon').addClass('search-form__icon--light');
+					} else {
+						$('.header-home .contacts-link').removeClass('contacts-link--light');
+						$('.header-home .search-form__icon').removeClass('search-form__icon--light');
+					}
+					this.#addAnimation(nextIndex);
+				},
+			});
+		} else {
+			return;
+		}
 	}
 
 	#addAnimation(screenIndex) {

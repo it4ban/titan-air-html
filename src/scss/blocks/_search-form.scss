@@ -28,17 +28,19 @@
 	&__icon {
 		z-index: 1;
 
-		&--active {
-			svg path {
-				fill: vars.$blue;
-			}
-		}
-
 		&--light {
 			transition: all 0.3s ease-in-out;
 
 			svg path {
 				fill: vars.$light !important;
+			}
+		}
+
+		&--active {
+			background-color: transparent !important;
+
+			svg path {
+				fill: vars.$blue !important;
 			}
 		}
 	}

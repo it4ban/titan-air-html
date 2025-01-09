@@ -1,0 +1,33 @@
+@use '../vars';
+
+.title-multicolor {
+	font-weight: 900;
+	font-size: 36px;
+	text-transform: uppercase;
+
+	@media (max-width: 520px) {
+		font-size: 24px;
+	}
+
+	@media (max-width: 398px) {
+		font-size: 18px;
+	}
+
+	&--blue {
+		color: vars.$blue;
+	}
+
+	&--yellow {
+		color: vars.$yellow;
+	}
+
+	&__accent {
+		&--blue {
+			color: vars.$blue;
+		}
+
+		&--yellow {
+			color: vars.$yellow;
+		}
+	}
+}

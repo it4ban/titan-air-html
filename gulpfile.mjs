@@ -18,8 +18,17 @@ import gulpAvif from 'gulp-avif';
 import newer from 'gulp-newer';
 import ttf2woff2 from 'gulp-ttf2woff2';
 
-const JS_LIBS = ['./node_modules/jquery/dist/jquery.js', './node_modules/pagepiling.js/dist/jquery.pagepiling.js'];
-const CSS_LIBS = ['./node_modules/pagepiling.js/dist/jquery.pagepiling.css', './node_modules/animate.css/animate.css'];
+const JS_LIBS = [
+	'./node_modules/jquery/dist/jquery.js',
+	'./node_modules/pagepiling.js/dist/jquery.pagepiling.js',
+	'./node_modules/@fancyapps/ui/dist/index.umd.js',
+];
+const CSS_LIBS = [
+	'./node_modules/pagepiling.js/dist/jquery.pagepiling.css',
+	'./node_modules/animate.css/animate.css',
+	'./node_modules/@fancyapps/ui/dist/carousel/carousel.css',
+	'./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css',
+];
 
 const sass = gulpSass(dartSass);
 const bs = browserSync.create();
