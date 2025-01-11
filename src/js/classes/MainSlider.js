@@ -13,14 +13,24 @@ export class MainSlider {
 	};
 
 	constructor(sliderId) {
-		this.#container = document.getElementById(sliderId);
+		this.#container = document.querySelector(sliderId);
+	}
+
+	#checkContainer(container) {
+		if (container.length === 0) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 
 	init() {
-		const carousel = new Carousel(this.#container, this.#sliderOptions);
+		const isCheck = this.#checkContainer($(this.#container));
 
-		if (carousel) {
-			Fancybox.bind('[data-fancybox="gallery"]', {});
+		if (isCheck) {
+			const carousel = new Carousel(this.#container, this.#sliderOptions);
+
+			Fancybox.bind('[data-fancybox="gallery"]');
 
 			$('#navNext').on('click', () => carousel.slideNext());
 			$('#navPrev').on('click', () => carousel.slidePrev());

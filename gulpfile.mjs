@@ -22,12 +22,14 @@ const JS_LIBS = [
 	'./node_modules/jquery/dist/jquery.js',
 	'./node_modules/pagepiling.js/dist/jquery.pagepiling.js',
 	'./node_modules/@fancyapps/ui/dist/index.umd.js',
+	'./node_modules/owl.carousel/dist/owl.carousel.js',
 ];
 const CSS_LIBS = [
 	'./node_modules/pagepiling.js/dist/jquery.pagepiling.css',
 	'./node_modules/animate.css/animate.css',
 	'./node_modules/@fancyapps/ui/dist/carousel/carousel.css',
 	'./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css',
+	'./node_modules/owl.carousel/dist/assets/owl.carousel.css',
 ];
 
 const sass = gulpSass(dartSass);
@@ -127,6 +129,7 @@ function watchFiles() {
 		server: {
 			baseDir: 'src/',
 		},
+		ui: false,
 		open: true,
 	});
 

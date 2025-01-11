@@ -2,18 +2,23 @@ import { Search } from './classes/Search.js';
 import { PageScroll } from './classes/PageScroll.js';
 import { Menu } from './classes/Menu.js';
 import { MainSlider } from './classes/MainSlider.js';
+import { NewsSlider } from './classes/NewsSlider.js';
 
 $(() => {
 	const pageScroll = new PageScroll('#pagepiling');
 	const search = new Search(1120);
 	const menu = new Menu();
-	const mainSlider = new MainSlider('mainSlider');
+	const mainSlider = new MainSlider('#mainSlider');
+	const newsSlider = new NewsSlider('#newsSlider');
+
 	pageScroll.init();
 	search.init();
 	mainSlider.init();
+	newsSlider.init();
+
 	$('.header-toggle').on('click', () => {
 		$('.header').toggleClass('header--hidden');
 	});
 	$('.menu-gamburger').on('click', (e) => menu.open(e));
-	$('.close-mobile').on('click', (e) => menu.close(e));
+	$('.mobile-menu__left-side').on('click', (e) => menu.close(e));
 });
