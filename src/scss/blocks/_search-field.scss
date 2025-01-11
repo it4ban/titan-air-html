@@ -1,0 +1,53 @@
+@use '../vars';
+@use '../mixins';
+
+.search-field {
+	display: flex;
+	flex-direction: column;
+	gap: 29px;
+
+	@media (max-width: 480px) {
+		gap: 15px;
+	}
+
+	&__input {
+		position: relative;
+	}
+}
+
+.text-field {
+	width: 100%;
+	border: 1px solid vars.$blue;
+	height: 50px;
+	border-radius: 30px;
+	padding: 0 67px 0 24px;
+	color: vars.$blue;
+
+	&::placeholder {
+		font-style: italic;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 156%;
+		color: #b3b3b3;
+	}
+}
+
+.search-button {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.count-founds {
+	text-align: center;
+	font-weight: 900;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	color: vars.$blue;
+
+	&__result {
+		color: vars.$yellow;
+	}
+}
