@@ -517,9 +517,9 @@
 														<span class="field-header">Services required:</span>
 
 														<div class="modal-checks__wrapper">
-															<div class="check-boxes" id="groundCheckboxes">
+															<div class="check-boxes">
 																<ul class="check-list">
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="groundCheckboxes">
 																		<input type="checkbox" class="check-item__input" value="landing&permits" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -539,7 +539,7 @@
 																		</div>
 																		<p class="check-item__title">Landing & o/f permits</p>
 																	</button>
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="groundCheckboxes">
 																		<input type="checkbox" class="check-item__input" value="groundHanding" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -559,7 +559,7 @@
 																		</div>
 																		<p class="check-item__title">Ground handling</p>
 																	</button>
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="groundCheckboxes">
 																		<input type="checkbox" class="check-item__input" value="catering" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -579,7 +579,7 @@
 																		</div>
 																		<p class="check-item__title">Catering</p>
 																	</button>
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="groundCheckboxes">
 																		<input type="checkbox" class="check-item__input" value="hotac" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -602,10 +602,10 @@
 																</ul>
 
 																<ul class="check-list">
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="groundCheckboxes">
 																		<input type="checkbox" class="check-item__input" value="airService" />
 																		<div class="check-item__checkbox">
-																			<div class="check-item__icon check-item__icon--checked">
+																			<div class="check-item__icon">
 																				<svg
 																					width="10"
 																					height="8"
@@ -622,7 +622,7 @@
 																		</div>
 																		<p class="check-item__title">Airport service</p>
 																	</button>
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="groundCheckboxes">
 																		<input type="checkbox" class="check-item__input" value="vipLounge" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -642,7 +642,7 @@
 																		</div>
 																		<p class="check-item__title">VIP/Business lounge</p>
 																	</button>
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="groundCheckboxes">
 																		<input type="checkbox" class="check-item__input" value="fuel" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -662,7 +662,7 @@
 																		</div>
 																		<p class="check-item__title">Fuel</p>
 																	</button>
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="groundCheckboxes">
 																		<input type="checkbox" class="check-item__input" value="other" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -757,7 +757,7 @@
 														<div class="modal-checks__wrapper">
 															<div class="check-boxes">
 																<ul class="check-list">
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="serviceType">
 																		<input type="checkbox" class="check-item__input" value="regularFlight" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -781,7 +781,7 @@
 
 																<ul class="check-list">
 																	<ul class="check-list">
-																		<button type="button" class="check-item">
+																		<button type="button" class="check-item" data-type="serviceType">
 																			<input type="checkbox" class="check-item__input" value="charterFlight" />
 																			<div class="check-item__checkbox">
 																				<div class="check-item__icon">
@@ -833,10 +833,10 @@
 														<div class="modal-checks__wrapper">
 															<div class="check-boxes">
 																<ul class="check-list">
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="airServices">
 																		<input type="checkbox" class="check-item__input" value="business&vip" />
 																		<div class="check-item__checkbox">
-																			<div class="check-item__icon check-item__icon--checked">
+																			<div class="check-item__icon">
 																				<svg
 																					width="10"
 																					height="8"
@@ -853,7 +853,7 @@
 																		</div>
 																		<p class="check-item__title">Business/VIP</p>
 																	</button>
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="airServices">
 																		<input type="checkbox" class="check-item__input" value="tourism" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -873,7 +873,7 @@
 																		</div>
 																		<p class="check-item__title">Tourism</p>
 																	</button>
-																	<button type="button" class="check-item">
+																	<button type="button" class="check-item" data-type="airServices">
 																		<input type="checkbox" class="check-item__input" value="other" />
 																		<div class="check-item__checkbox">
 																			<div class="check-item__icon">
@@ -897,10 +897,10 @@
 
 																<ul class="check-list">
 																	<ul class="check-list">
-																		<button type="button" class="check-item">
+																		<button type="button" class="check-item" data-type="airServices">
 																			<input type="checkbox" class="check-item__input" value="marineTravel" />
 																			<div class="check-item__checkbox">
-																				<div class="check-item__icon check-item__icon--checked">
+																				<div class="check-item__icon">
 																					<svg
 																						width="10"
 																						height="8"
@@ -917,7 +917,7 @@
 																			</div>
 																			<p class="check-item__title">Marine travel</p>
 																		</button>
-																		<button type="button" class="check-item">
+																		<button type="button" class="check-item" data-type="airServices">
 																			<input type="checkbox" class="check-item__input" value="sportEvent" />
 																			<div class="check-item__checkbox">
 																				<div class="check-item__icon">

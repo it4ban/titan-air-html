@@ -26,10 +26,32 @@ export class ModalForm {
 
 		const targetForm = $(`.dialog-modal[data-modal="${formName}"]`);
 		if (targetForm.length) {
+			const addFileButton = $(targetForm).find('.add-file .btn');
+			addFileButton.on('click', (e) => this.#addFile(e, targetForm));
+
 			targetForm.get(0).scrollIntoView({ behavior: 'smooth' });
+
 			targetForm.addClass('dialog-modal--open');
 			this.#backdrop.addClass('dialog-backdrop--active');
 		}
+	}
+
+	#addFile(e, currentForm) {
+		e.preventDefault();
+
+		const fileInput = $(currentForm).find('.add-file__input');
+		const fileName = $(currentForm).find('.file-name');
+
+		fileInput.trigger('click');
+
+		fileInput.on('change', (e) => {
+			const fileInput = e.target;
+
+			const file = fileInput.files ? fileInput.files[0] : null;
+			if (file) {
+				fileName.text(file.name);
+			}
+		});
 	}
 
 	#close() {
