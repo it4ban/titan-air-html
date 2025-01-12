@@ -30,6 +30,10 @@
 		font-size: 18px;
 		font-weight: 600;
 
+		@media (max-width: 480px) {
+			display: none;
+		}
+
 		@media (max-width: 464px) {
 			font-size: 16px;
 			text-align: right;

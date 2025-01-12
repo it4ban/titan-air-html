@@ -23,6 +23,7 @@ const JS_LIBS = [
 	'./node_modules/pagepiling.js/dist/jquery.pagepiling.js',
 	'./node_modules/@fancyapps/ui/dist/index.umd.js',
 	'./node_modules/owl.carousel/dist/owl.carousel.js',
+	'./node_modules/custom-select/build/jquery.custom-select.min.js',
 ];
 const CSS_LIBS = [
 	'./node_modules/pagepiling.js/dist/jquery.pagepiling.css',
@@ -30,6 +31,7 @@ const CSS_LIBS = [
 	'./node_modules/@fancyapps/ui/dist/carousel/carousel.css',
 	'./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css',
 	'./node_modules/owl.carousel/dist/assets/owl.carousel.css',
+	'./node_modules/custom-select/build/custom-select.css',
 ];
 
 const sass = gulpSass(dartSass);

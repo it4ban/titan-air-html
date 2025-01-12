@@ -43,9 +43,11 @@ export class PageScroll {
 					if (nextIndex > 1) {
 						$('.header-home .contacts-link').addClass('contacts-link--light');
 						$('.header-home .search-form__icon').addClass('search-form__icon--light');
+						$('.header-home .custom-select-opener span').css('color', '#fff');
 					} else {
 						$('.header-home .contacts-link').removeClass('contacts-link--light');
 						$('.header-home .search-form__icon').removeClass('search-form__icon--light');
+						$('.header-home .custom-select-opener span').css('color', '#1c2939');
 					}
 					this.#addAnimation(nextIndex);
 				},

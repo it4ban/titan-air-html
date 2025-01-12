@@ -129,33 +129,4 @@
 			gap: 12px;
 		}
 	}
-
-	&__bottom-icons {
-		display: none;
-		justify-content: end;
-		align-items: center;
-		width: 100%;
-		gap: 25px;
-		padding-right: 45px;
-
-		@media (max-width: 510px) {
-			padding-right: 0px;
-		}
-
-		@media (max-width: 648px) {
-			display: flex;
-		}
-
-		.icon {
-			background-color: transparent;
-
-			&:hover {
-				background-color: vars.$blue;
-			}
-		}
-
-		@media (max-width: 368px) {
-			gap: 12px;
-		}
-	}
 }
