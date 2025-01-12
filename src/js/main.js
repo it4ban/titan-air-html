@@ -5,6 +5,7 @@ import { MainSlider } from './classes/MainSlider.js';
 import { NewsSlider } from './classes/NewsSlider.js';
 import { ModalForm } from './classes/ModalForm.js';
 import { CheckBox } from './classes/Checkbox.js';
+import { ContactsBar } from './classes/ContactsBar.js';
 
 $(() => {
 	const pageScroll = new PageScroll('#pagepiling');
@@ -14,6 +15,7 @@ $(() => {
 	const newsSlider = new NewsSlider('#newsSlider');
 	const modalForms = new ModalForm();
 	const checkBoxes = new CheckBox();
+	const contactsBar = new ContactsBar();
 
 	pageScroll.init();
 	search.init();
@@ -21,6 +23,7 @@ $(() => {
 	newsSlider.init();
 	modalForms.init();
 	checkBoxes.init();
+	contactsBar.init();
 
 	$('.header-toggle').on('click', () => {
 		$('.header').toggleClass('header--hidden');

@@ -1,0 +1,27 @@
+.contact-item {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+
+	&__header {
+		font-size: 18px;
+		line-height: 139%;
+		font-weight: 700;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		gap: 22px;
+	}
+
+	&__info {
+		font-weight: 400;
+		font-size: 14px;
+		color: #1d2d42;
+
+		&--email {
+			text-decoration: underline !important;
+		}
+	}
+}
