@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Search</title>
+		<link rel="stylesheet" href="css/libs.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="mobile-menu">
+			<div class="mobile-menu__wrapper">
+				<div class="mobile-menu__left-side">
+					<button class="close-mobile">
+						<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M4.24265 1.41422C3.4616 0.633168 2.19527 0.633168 1.41422 1.41422C0.633171 2.19527 0.633171 3.4616 1.41422 4.24264L12.7279 15.5564L1.41422 26.8701C0.633168 27.6511 0.633168 28.9174 1.41422 29.6985C2.19527 30.4795 3.4616 30.4795 4.24264 29.6985L15.5564 18.3848L26.8701 29.6985C27.6511 30.4795 28.9174 30.4795 29.6985 29.6985C30.4795 28.9174 30.4795 27.6511 29.6985 26.8701L18.3848 15.5563L29.6985 4.24264C30.4795 3.4616 30.4795 2.19527 29.6985 1.41422C28.9174 0.633169 27.6511 0.633169 26.8701 1.41422L15.5564 12.7279L4.24265 1.41422Z"
+								fill="white"
+							/>
+						</svg>
+					</button>
+				</div>
+
+				<div class="mobile-menu__right-side">
+					<ul class="nav-mobile">
+						<li class="nav-mobile__item">
+							<a href="/about_us" class="contrast-header nav-mobile__link"> About </a>
+						</li>
+						<li class="nav-mobile__item">
+							<a href="/service" class="contrast-header nav-mobile__link">Flight support service</a>
+						</li>
+						<li class="nav-mobile__item">
+							<a href="/travels" class="contrast-header nav-mobile__link">Travel agency</a>
+						</li>
+						<li class="nav-mobile__item">
+							<a href="/charters" class="contrast-header nav-mobile__link">Charter flights</a>
+						</li>
+						<li class="nav-mobile__item">
+							<a href="/contacts" class="contrast-header nav-mobile__link">Contact us</a>
+						</li>
+					</ul>
+
+					<div class="nav-mobile__social-icons">
+						<a href="#" class="social-icon social-icon--yellow">
+							<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M9.47695 0.167479L7.34794 0.164062C4.95607 0.164062 3.41033 1.74995 3.41033 4.20453V6.06746H1.2697C1.08473 6.06746 0.934937 6.21742 0.934937 6.4024V9.10157C0.934937 9.28655 1.0849 9.43634 1.2697 9.43634H3.41033V16.2472C3.41033 16.4322 3.56012 16.582 3.7451 16.582H6.53801C6.72298 16.582 6.87278 16.432 6.87278 16.2472V9.43634H9.37567C9.56065 9.43634 9.71044 9.28655 9.71044 9.10157L9.71146 6.4024C9.71146 6.31358 9.6761 6.22853 9.61342 6.16567C9.55074 6.10282 9.46534 6.06746 9.37652 6.06746H6.87278V4.48823C6.87278 3.72919 7.05365 3.34387 8.04241 3.34387L9.47661 3.34335C9.66142 3.34335 9.81121 3.19339 9.81121 3.00858V0.502249C9.81121 0.317613 9.66159 0.16782 9.47695 0.167479Z"
+									fill="white"
+								/>
+							</svg>
+						</a>
+						<a href="#" class="social-icon social-icon--yellow">
+							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12.0512 0.164062H4.69481C2.19662 0.164062 0.164185 2.1966 0.164185 4.69479V12.0512C0.164185 14.5494 2.19662 16.5819 4.69481 16.5819H12.0512C14.5496 16.5819 16.582 14.5493 16.582 12.0512V4.69479C16.5821 2.1966 14.5496 0.164062 12.0512 0.164062ZM15.1254 12.0512C15.1254 13.7462 13.7464 15.1252 12.0513 15.1252H4.69481C2.99983 15.1253 1.62085 13.7462 1.62085 12.0512V4.69479C1.62085 2.99981 2.99983 1.62073 4.69481 1.62073H12.0512C13.7463 1.62073 15.1253 2.99981 15.1253 4.69479V12.0512H15.1254Z"
+									fill="white"
+								/>
+								<path
+									d="M8.37303 4.14282C6.04033 4.14282 4.14258 6.04057 4.14258 8.37328C4.14258 10.7059 6.04033 12.6035 8.37303 12.6035C10.7057 12.6035 12.6035 10.7059 12.6035 8.37328C12.6035 6.04057 10.7057 4.14282 8.37303 4.14282ZM8.37303 11.1468C6.84363 11.1468 5.59925 9.90258 5.59925 8.37318C5.59925 6.84368 6.84353 5.59939 8.37303 5.59939C9.90253 5.59939 11.1468 6.84368 11.1468 8.37318C11.1468 9.90258 9.90244 11.1468 8.37303 11.1468Z"
+									fill="white"
+								/>
+								<path
+									d="M12.781 2.90747C12.5003 2.90747 12.2246 3.02109 12.0264 3.22017C11.8273 3.41828 11.7128 3.69407 11.7128 3.97569C11.7128 4.25644 11.8274 4.53214 12.0264 4.73122C12.2245 4.92933 12.5003 5.04392 12.781 5.04392C13.0626 5.04392 13.3374 4.92933 13.5365 4.73122C13.7356 4.53214 13.8492 4.25635 13.8492 3.97569C13.8492 3.69407 13.7356 3.41828 13.5365 3.22017C13.3384 3.02109 13.0626 2.90747 12.781 2.90747Z"
+									fill="white"
+								/>
+							</svg>
+						</a>
+						<a href="#" class="social-icon social-icon--yellow">
+							<svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M15.9422 1.5878C15.3495 0.883314 14.2554 0.595947 12.1657 0.595947H4.58039C2.44294 0.595947 1.33023 0.90185 0.739818 1.65188C0.164185 2.38317 0.164185 3.46066 0.164185 4.95194V7.7943C0.164185 10.6834 0.84717 12.1502 4.58039 12.1502H12.1658C13.9779 12.1502 14.982 11.8967 15.6317 11.275C16.2979 10.6374 16.5821 9.59646 16.5821 7.7943V4.95194C16.5821 3.37926 16.5376 2.29541 15.9422 1.5878ZM10.7045 6.76553L7.26006 8.56573C7.18305 8.60598 7.09884 8.62595 7.01474 8.62595C6.91952 8.62595 6.82451 8.60031 6.74035 8.54937C6.58189 8.45335 6.48513 8.2816 6.48513 8.09634V4.50749C6.48513 4.32255 6.58163 4.15095 6.73977 4.05488C6.89796 3.95881 7.09471 3.95224 7.25884 4.03751L10.7033 5.82611C10.8786 5.9171 10.9886 6.09801 10.9889 6.2954C10.9891 6.49294 10.8795 6.67412 10.7045 6.76553Z"
+									fill="white"
+								/>
+							</svg>
+						</a>
+						<a href="#" class="social-icon social-icon--yellow">
+							<svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M16.582 2.28294C15.9777 2.55069 15.3293 2.73228 14.6481 2.81335C15.3437 2.39682 15.8761 1.73613 16.1285 0.951293C15.476 1.33703 14.7558 1.61713 13.9884 1.76897C13.3739 1.11341 12.4998 0.705078 11.5303 0.705078C9.67026 0.705078 8.16214 2.21319 8.16214 4.07217C8.16214 4.33582 8.19189 4.59333 8.24935 4.83957C5.45063 4.699 2.96893 3.35812 1.30795 1.32061C1.01761 1.81717 0.852435 2.39577 0.852435 3.0134C0.852435 4.18194 1.44748 5.21299 2.3503 5.81622C1.79834 5.79776 1.27922 5.64592 0.82475 5.39354V5.4356C0.82475 7.06682 1.9861 8.42821 3.52601 8.73806C3.24387 8.81398 2.94636 8.85605 2.63858 8.85605C2.4211 8.85605 2.21078 8.8345 2.00456 8.79346C2.43338 10.1323 3.67683 11.1059 5.15007 11.1326C3.99794 12.0354 2.54523 12.572 0.967361 12.572C0.695499 12.572 0.427715 12.5555 0.164062 12.5258C1.65474 13.483 3.42447 14.0411 5.32653 14.0411C11.5221 14.0411 14.9087 8.9094 14.9087 4.45895L14.8974 4.02294C15.5591 3.55098 16.1316 2.958 16.582 2.28294Z"
+									fill="white"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header">
+			<div class="header__wrapper">
+				<div class="menu-gamburger">
+					<span class="menu-gamburger__line"></span>
+					<span class="menu-gamburger__line"></span>
+					<span class="menu-gamburger__line"></span>
+					<span class="menu-gamburger__line"></span>
+				</div>
+
+				<a href="#" class="logo">
+					<span class="logo__icon">
+						<svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M13.5617 8.73955C13.3989 8.73955 13.2361 8.631 13.2361 8.46818C12.8019 7.1656 10.9565 1.304 10.9565 1.304C10.848 0.92408 11.0108 0.65271 11.3365 0.65271H12.8019C13.1818 0.65271 13.5617 0.92408 13.6702 1.304C13.6702 1.304 16.384 6.46004 17.3066 8.14253C17.3609 8.25108 17.3609 8.4139 17.3066 8.52245C17.2523 8.631 17.1438 8.68527 16.981 8.68527C16.0583 8.73955 14.2673 8.73955 13.5617 8.73955ZM12.9647 25.3474H11.4993C11.1736 25.3474 10.9565 25.076 11.1194 24.6961L14.3758 13.5699C9.21977 13.6785 4.5522 12.9187 2.81543 12.3216C2.54406 12.2131 2.38124 11.996 2.32696 11.7246C1.94704 10.422 0.807288 6.51431 0.807288 6.51431C0.753014 6.40576 0.861562 6.18866 1.07866 6.18866C1.51285 6.18866 1.78422 6.18866 2.32696 6.18866C2.65261 6.18866 2.97825 6.40576 3.14107 6.67713C3.73809 7.59979 4.98639 9.60793 5.36631 10.2049C5.42059 10.3135 5.58341 10.3678 5.69196 10.3678C8.02574 10.3678 27.7272 10.3678 27.7272 10.3678C28.4328 10.422 29.0298 10.9105 29.1926 11.6161C29.3555 12.3216 28.9755 13.0272 28.3243 13.2986C28.0529 13.4071 27.8358 13.5157 27.7272 13.5157H19.3148L13.8873 24.6418C13.7245 25.076 13.3446 25.3474 12.9647 25.3474Z"
+								fill="#1D2D42"
+							/>
+						</svg>
+					</span>
+					<span class="logo__title"><span>Titan Air</span> service</span>
+				</a>
+
+				<div class="header__right">
+					<form action="" class="search-popup">
+						<div class="close-popup">
+							<div class="close-popup__wrapper">
+								<button class="close-popup__button">
+									<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M4.24265 1.41422C3.4616 0.633168 2.19527 0.633168 1.41422 1.41422C0.633171 2.19527 0.633171 3.4616 1.41422 4.24264L12.7279 15.5564L1.41422 26.8701C0.633168 27.6511 0.633168 28.9174 1.41422 29.6985C2.19527 30.4795 3.4616 30.4795 4.24264 29.6985L15.5564 18.3848L26.8701 29.6985C27.6511 30.4795 28.9174 30.4795 29.6985 29.6985C30.4795 28.9174 30.4795 27.6511 29.6985 26.8701L18.3848 15.5564L29.6985 4.24265C30.4795 3.4616 30.4795 2.19527 29.6985 1.41422C28.9174 0.633169 27.6511 0.63317 26.8701 1.41422L15.5564 12.7279L4.24265 1.41422Z"
+											fill="white"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<div class="container">
+							<div class="search-popup__wrapper">
+								<div class="popup-input">
+									<input type="text" class="popup-input__field" />
+									<a href="#" class="popup-input__icon">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M15.6084 13.7175L12.1325 10.2416C12.114 10.2232 12.0923 10.2103 12.073 10.1931C12.757 9.15558 13.1561 7.91368 13.1561 6.57813C13.1561 2.94511 10.211 0 6.57807 0C2.94511 0 0 2.94511 0 6.57807C0 10.211 2.94505 13.1561 6.578 13.1561C7.91361 13.1561 9.15545 12.757 10.1929 12.073C10.2101 12.0923 10.223 12.1139 10.2415 12.1324L13.7174 15.6084C14.2396 16.1305 15.0861 16.1305 15.6084 15.6084C16.1305 15.0862 16.1305 14.2396 15.6084 13.7175ZM6.57807 10.8757C4.20446 10.8757 2.28035 8.95161 2.28035 6.57807C2.28035 4.20446 4.20453 2.28035 6.57807 2.28035C8.95155 2.28035 10.8757 4.20453 10.8757 6.57807C10.8757 8.95161 8.95155 10.8757 6.57807 10.8757Z"
+												fill="#1D2D42"
+											/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</form>
+
+					<form action="" class="search-form">
+						<input type="text" class="search-form__input" />
+						<a href="#" class="icon search-form__icon search-form__icon--light">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M15.6084 13.7175L12.1325 10.2416C12.114 10.2232 12.0923 10.2103 12.073 10.1931C12.757 9.15558 13.1561 7.91368 13.1561 6.57813C13.1561 2.94511 10.211 0 6.57807 0C2.94511 0 0 2.94511 0 6.57807C0 10.211 2.94505 13.1561 6.578 13.1561C7.91361 13.1561 9.15545 12.757 10.1929 12.073C10.2101 12.0923 10.223 12.1139 10.2415 12.1324L13.7174 15.6084C14.2396 16.1305 15.0861 16.1305 15.6084 15.6084C16.1305 15.0862 16.1305 14.2396 15.6084 13.7175ZM6.57807 10.8757C4.20446 10.8757 2.28035 8.95161 2.28035 6.57807C2.28035 4.20446 4.20453 2.28035 6.57807 2.28035C8.95155 2.28035 10.8757 4.20453 10.8757 6.57807C10.8757 8.95161 8.95155 10.8757 6.57807 10.8757Z"
+									fill="#1D2D42"
+								/>
+							</svg>
+						</a>
+					</form>
+
+					<a href="#" class="icon icon--light contacts-link contacts-link--light">
+						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M1.53568 4.58934C1.73808 4.73216 2.34818 5.15635 3.36602 5.86168C4.38389 6.567 5.16365 7.11009 5.70532 7.49096C5.76484 7.53271 5.89127 7.62346 6.08469 7.76335C6.27815 7.90332 6.43889 8.01644 6.5668 8.10272C6.6948 8.18897 6.84953 8.28573 7.03117 8.39284C7.21274 8.49985 7.38389 8.58035 7.5446 8.63364C7.70535 8.68737 7.85414 8.71398 7.99102 8.71398H8H8.00901C8.14589 8.71398 8.29475 8.68733 8.45549 8.63364C8.61614 8.58035 8.78745 8.49976 8.96886 8.39284C9.15037 8.2856 9.30511 8.18894 9.43311 8.10272C9.56111 8.01644 9.72173 7.90332 9.91524 7.76335C10.1086 7.62334 10.2352 7.53271 10.2947 7.49096C10.8423 7.11009 12.2352 6.14279 14.4733 4.58915C14.9078 4.28571 15.2708 3.91957 15.5624 3.49098C15.8542 3.06257 16 2.61315 16 2.14296C16 1.75005 15.8586 1.41371 15.5758 1.13397C15.293 0.854176 14.9582 0.714355 14.5714 0.714355H1.42851C0.970209 0.714355 0.617514 0.869094 0.370489 1.17857C0.123496 1.48811 0 1.87502 0 2.33926C0 2.71425 0.163745 3.12061 0.491077 3.55809C0.818379 3.9956 1.1667 4.33938 1.53568 4.58934Z"
+								fill="white"
+							/>
+							<path
+								d="M15.107 5.54458C13.1549 6.86589 11.6725 7.89276 10.6608 8.62498C10.3215 8.87489 10.0462 9.06997 9.83487 9.20976C9.6235 9.34964 9.34239 9.49249 8.99113 9.63826C8.64 9.78424 8.31276 9.85701 8.00913 9.85701H8.00003H7.99105C7.68749 9.85701 7.36006 9.78424 7.00893 9.63826C6.6578 9.49249 6.3765 9.34964 6.16519 9.20976C5.95394 9.06997 5.67862 8.87489 5.33937 8.62498C4.53575 8.03574 3.05661 7.0088 0.901877 5.54458C0.562505 5.31854 0.26191 5.05944 0 4.76782V11.8569C0 12.25 0.139821 12.5862 0.419619 12.8659C0.699355 13.1458 1.03573 13.2857 1.42861 13.2857H14.5715C14.9643 13.2857 15.3006 13.1458 15.5804 12.8659C15.8603 12.5861 16 12.25 16 11.8569V4.76782C15.744 5.05341 15.4465 5.3125 15.107 5.54458Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+
+					<select class="lang-switcher">
+						<option value="en" selected>En</option>
+						<option value="ru">Ru</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<main class="search">
+			<div class="container">
+				<div class="search__wrapper">
+					<div class="search__header">
+						<ul class="breadcrumbs">
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Home</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="#" class="breadcrumbs__link breadcrumbs__link--active">Search</a>
+							</li>
+						</ul>
+
+						<form class="search-field">
+							<div class="search-field__input">
+								<input type="text" placeholder="You text..." class="text-field" />
+
+								<button class="search-button">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M15.6084 13.7175L12.1325 10.2416C12.114 10.2232 12.0923 10.2103 12.073 10.1931C12.757 9.15558 13.1561 7.91368 13.1561 6.57813C13.1561 2.94511 10.211 0 6.57807 0C2.94511 0 0 2.94511 0 6.57807C0 10.211 2.94505 13.1561 6.578 13.1561C7.91361 13.1561 9.15545 12.757 10.1929 12.073C10.2101 12.0923 10.223 12.1139 10.2415 12.1324L13.7174 15.6084C14.2396 16.1305 15.0861 16.1305 15.6084 15.6084C16.1305 15.0862 16.1305 14.2396 15.6084 13.7175ZM6.57807 10.8757C4.20446 10.8757 2.28035 8.95161 2.28035 6.57807C2.28035 4.20446 4.20453 2.28035 6.57807 2.28035C8.95155 2.28035 10.8757 4.20453 10.8757 6.57807C10.8757 8.95161 8.95155 10.8757 6.57807 10.8757Z"
+											fill="#1D2D42"
+										/>
+									</svg>
+								</button>
+							</div>
+
+							<span class="count-founds">we found <span class="count-founds__result">23</span> results</span>
+						</form>
+					</div>
+
+					<div class="search__results">
+						<div class="search-item">
+							<div class="search-item__wrapper">
+								<div class="underline"></div>
+
+								<div class="search-content">
+									<span class="search-content__title">Headline 1 Lorem ipsum dolor sit amet ...</span>
+									<p class="search-content__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+
+								<div class="underline"></div>
+							</div>
+						</div>
+						<div class="search-item">
+							<div class="search-item__wrapper">
+								<div class="underline"></div>
+
+								<div class="search-content">
+									<span class="search-content__title">Headline 2 Lorem ipsum dolor sit amet ...</span>
+									<p class="search-content__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+
+								<div class="underline"></div>
+							</div>
+						</div>
+						<div class="search-item">
+							<div class="search-item__wrapper">
+								<div class="underline"></div>
+
+								<div class="search-content">
+									<span class="search-content__title">Headline 3 Lorem ipsum dolor sit amet ...</span>
+									<p class="search-content__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+
+								<div class="underline"></div>
+							</div>
+						</div>
+						<div class="search-item">
+							<div class="search-item__wrapper">
+								<div class="underline"></div>
+
+								<div class="search-content">
+									<span class="search-content__title">Headline 4 Lorem ipsum dolor sit amet ...</span>
+									<p class="search-content__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+
+								<div class="underline"></div>
+							</div>
+						</div>
+						<div class="search-item">
+							<div class="search-item__wrapper">
+								<div class="underline"></div>
+
+								<div class="search-content">
+									<span class="search-content__title">Headline 5 Lorem ipsum dolor sit amet ...</span>
+									<p class="search-content__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+										culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+
+								<div class="underline"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="pagination">
+						<div class="pagination__wrapper">
+							<button class="pagination-button">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M1.68055 4.9998L5.46281 1.21774C5.73461 0.94583 5.73461 0.505035 5.46281 0.233232C5.191 -0.0386814 4.75023 -0.0386814 4.47832 0.233232L0.203764 4.50772C0.0678625 4.64369 -1.04904e-05 4.8217 -1.04904e-05 4.9998C-1.04904e-05 5.17796 0.0679951 5.35611 0.203764 5.49201L4.47832 9.76645C4.75023 10.0385 5.19103 10.0385 5.46281 9.76645C5.73461 9.49465 5.73461 9.05381 5.46281 8.78203L1.68055 4.9998ZM9.79615 8.78203C10.068 9.05383 10.068 9.49467 9.79615 9.76645C9.52434 10.0385 9.0837 10.0385 8.81164 9.76645L4.53708 5.49203C4.40118 5.35613 4.33342 5.17799 4.33342 4.99982C4.33342 4.82172 4.40131 4.64358 4.53708 4.50774L8.81164 0.233232C9.08368 -0.0386814 9.52434 -0.0386814 9.79615 0.233232C10.068 0.505035 10.068 0.945808 9.79615 1.21774L6.01381 4.9998L9.79615 8.78203Z"
+										fill="#1D2D42"
+									/>
+								</svg>
+							</button>
+							<button class="pagination-button">
+								<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.149902 4.99991C0.149902 4.82075 0.218311 4.64155 0.354817 4.50492L4.6547 0.205141C4.92822 -0.0683805 5.37169 -0.0683805 5.6451 0.205141C5.91852 0.478552 5.91852 0.921933 5.6451 1.19548L1.84039 4.99991L5.64484 8.80449C5.91825 9.0779 5.91825 9.52135 5.64484 9.79474C5.37143 10.0684 4.92809 10.0684 4.65457 9.79474L0.354662 5.49503C0.218178 5.35832 0.149902 5.17913 0.149902 4.99991Z"
+										fill="#1D2D42"
+									/>
+								</svg>
+							</button>
+							<button class="pagination-button">1</button>
+							<button class="pagination-button">2</button>
+							<button class="pagination-button">3</button>
+							<button class="pagination-button">...</button>
+							<button class="pagination-button">28</button>
+							<button class="pagination-button">
+								<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M5.8501 4.99991C5.8501 4.82075 5.78169 4.64155 5.64518 4.50492L1.3453 0.205141C1.07178 -0.0683805 0.628307 -0.0683805 0.354896 0.205141C0.0814848 0.478552 0.0814848 0.921933 0.354896 1.19548L4.15961 4.99991L0.355162 8.80449C0.0817504 9.0779 0.0817504 9.52135 0.355162 9.79474C0.628572 10.0684 1.07191 10.0684 1.34543 9.79474L5.64534 5.49503C5.78182 5.35832 5.8501 5.17913 5.8501 4.99991Z"
+										fill="#1D2D42"
+									/>
+								</svg>
+							</button>
+							<button class="pagination-button">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M8.31945 4.9998L4.53719 1.21774C4.26539 0.94583 4.26539 0.505035 4.53719 0.233232C4.809 -0.0386814 5.24977 -0.0386814 5.52168 0.233232L9.79624 4.50772C9.93214 4.64369 10 4.8217 10 4.9998C10 5.17796 9.932 5.35611 9.79624 5.49201L5.52168 9.76645C5.24977 10.0385 4.80897 10.0385 4.53719 9.76645C4.26539 9.49465 4.26539 9.05381 4.53719 8.78203L8.31945 4.9998ZM0.203852 8.78203C-0.0679508 9.05383 -0.0679508 9.49467 0.203852 9.76645C0.475656 10.0385 0.916296 10.0385 1.18836 9.76645L5.46292 5.49203C5.59882 5.35613 5.66658 5.17799 5.66658 4.99982C5.66658 4.82172 5.59869 4.64358 5.46292 4.50774L1.18836 0.233232C0.916318 -0.0386814 0.475656 -0.0386814 0.203852 0.233232C-0.0679508 0.505035 -0.0679508 0.945808 0.203852 1.21774L3.98619 4.9998L0.203852 8.78203Z"
+										fill="#1D2D42"
+									/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer
+			class="footer"
+			style="
+				background-image: url('images/footer-bg.avif');
+				background-image: -webkit-image-set(url('images/footer-bg.avif') 1x, url('images/footer-bg@2x.avif') 2x);
+			"
+		>
+			<div class="footer-top">
+				<div class="footer-top__wrapper">
+					<a href="#" class="logo">
+						<span class="logo__icon">
+							<svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M13.5617 8.73955C13.3989 8.73955 13.2361 8.631 13.2361 8.46818C12.8019 7.1656 10.9565 1.304 10.9565 1.304C10.848 0.92408 11.0108 0.65271 11.3365 0.65271H12.8019C13.1818 0.65271 13.5617 0.92408 13.6702 1.304C13.6702 1.304 16.384 6.46004 17.3066 8.14253C17.3609 8.25108 17.3609 8.4139 17.3066 8.52245C17.2523 8.631 17.1438 8.68527 16.981 8.68527C16.0583 8.73955 14.2673 8.73955 13.5617 8.73955ZM12.9647 25.3474H11.4993C11.1736 25.3474 10.9565 25.076 11.1194 24.6961L14.3758 13.5699C9.21977 13.6785 4.5522 12.9187 2.81543 12.3216C2.54406 12.2131 2.38124 11.996 2.32696 11.7246C1.94704 10.422 0.807288 6.51431 0.807288 6.51431C0.753014 6.40576 0.861562 6.18866 1.07866 6.18866C1.51285 6.18866 1.78422 6.18866 2.32696 6.18866C2.65261 6.18866 2.97825 6.40576 3.14107 6.67713C3.73809 7.59979 4.98639 9.60793 5.36631 10.2049C5.42059 10.3135 5.58341 10.3678 5.69196 10.3678C8.02574 10.3678 27.7272 10.3678 27.7272 10.3678C28.4328 10.422 29.0298 10.9105 29.1926 11.6161C29.3555 12.3216 28.9755 13.0272 28.3243 13.2986C28.0529 13.4071 27.8358 13.5157 27.7272 13.5157H19.3148L13.8873 24.6418C13.7245 25.076 13.3446 25.3474 12.9647 25.3474Z"
+									fill="#1D2D42"
+								/>
+							</svg>
+						</span>
+						<span class="logo__title"><span>Titan Air</span> service</span>
+					</a>
+
+					<div class="footer-top__right-side">
+						<form action="" class="search-popup">
+							<div class="close-popup">
+								<div class="close-popup__wrapper">
+									<button class="close-popup__button">
+										<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M4.24265 1.41422C3.4616 0.633168 2.19527 0.633168 1.41422 1.41422C0.633171 2.19527 0.633171 3.4616 1.41422 4.24264L12.7279 15.5564L1.41422 26.8701C0.633168 27.6511 0.633168 28.9174 1.41422 29.6985C2.19527 30.4795 3.4616 30.4795 4.24264 29.6985L15.5564 18.3848L26.8701 29.6985C27.6511 30.4795 28.9174 30.4795 29.6985 29.6985C30.4795 28.9174 30.4795 27.6511 29.6985 26.8701L18.3848 15.5564L29.6985 4.24265C30.4795 3.4616 30.4795 2.19527 29.6985 1.41422C28.9174 0.633169 27.6511 0.63317 26.8701 1.41422L15.5564 12.7279L4.24265 1.41422Z"
+												fill="white"
+											/>
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<div class="container">
+								<div class="search-popup__wrapper">
+									<div class="popup-input">
+										<input type="text" class="popup-input__field" />
+										<a href="#" class="popup-input__icon">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													fill-rule="evenodd"
+													clip-rule="evenodd"
+													d="M15.6084 13.7175L12.1325 10.2416C12.114 10.2232 12.0923 10.2103 12.073 10.1931C12.757 9.15558 13.1561 7.91368 13.1561 6.57813C13.1561 2.94511 10.211 0 6.57807 0C2.94511 0 0 2.94511 0 6.57807C0 10.211 2.94505 13.1561 6.578 13.1561C7.91361 13.1561 9.15545 12.757 10.1929 12.073C10.2101 12.0923 10.223 12.1139 10.2415 12.1324L13.7174 15.6084C14.2396 16.1305 15.0861 16.1305 15.6084 15.6084C16.1305 15.0862 16.1305 14.2396 15.6084 13.7175ZM6.57807 10.8757C4.20446 10.8757 2.28035 8.95161 2.28035 6.57807C2.28035 4.20446 4.20453 2.28035 6.57807 2.28035C8.95155 2.28035 10.8757 4.20453 10.8757 6.57807C10.8757 8.95161 8.95155 10.8757 6.57807 10.8757Z"
+													fill="#1D2D42"
+												/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<form action="" class="search-form">
+							<input type="text" class="search-form__input" />
+							<button class="icon icon--transparent search-form__icon search-form__icon--light">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M15.6084 13.7175L12.1325 10.2416C12.114 10.2232 12.0923 10.2103 12.073 10.1931C12.757 9.15558 13.1561 7.91368 13.1561 6.57813C13.1561 2.94511 10.211 0 6.57807 0C2.94511 0 0 2.94511 0 6.57807C0 10.211 2.94505 13.1561 6.578 13.1561C7.91361 13.1561 9.15545 12.757 10.1929 12.073C10.2101 12.0923 10.223 12.1139 10.2415 12.1324L13.7174 15.6084C14.2396 16.1305 15.0861 16.1305 15.6084 15.6084C16.1305 15.0862 16.1305 14.2396 15.6084 13.7175ZM6.57807 10.8757C4.20446 10.8757 2.28035 8.95161 2.28035 6.57807C2.28035 4.20446 4.20453 2.28035 6.57807 2.28035C8.95155 2.28035 10.8757 4.20453 10.8757 6.57807C10.8757 8.95161 8.95155 10.8757 6.57807 10.8757Z"
+										fill="#1D2D42"
+									/>
+								</svg>
+							</button>
+						</form>
+
+						<a href="#" class="icon icon--transparent contacts-link contacts-link--light">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M1.53568 4.58934C1.73808 4.73216 2.34818 5.15635 3.36602 5.86168C4.38389 6.567 5.16365 7.11009 5.70532 7.49096C5.76484 7.53271 5.89127 7.62346 6.08469 7.76335C6.27815 7.90332 6.43889 8.01644 6.5668 8.10272C6.6948 8.18897 6.84953 8.28573 7.03117 8.39284C7.21274 8.49985 7.38389 8.58035 7.5446 8.63364C7.70535 8.68737 7.85414 8.71398 7.99102 8.71398H8H8.00901C8.14589 8.71398 8.29475 8.68733 8.45549 8.63364C8.61614 8.58035 8.78745 8.49976 8.96886 8.39284C9.15037 8.2856 9.30511 8.18894 9.43311 8.10272C9.56111 8.01644 9.72173 7.90332 9.91524 7.76335C10.1086 7.62334 10.2352 7.53271 10.2947 7.49096C10.8423 7.11009 12.2352 6.14279 14.4733 4.58915C14.9078 4.28571 15.2708 3.91957 15.5624 3.49098C15.8542 3.06257 16 2.61315 16 2.14296C16 1.75005 15.8586 1.41371 15.5758 1.13397C15.293 0.854176 14.9582 0.714355 14.5714 0.714355H1.42851C0.970209 0.714355 0.617514 0.869094 0.370489 1.17857C0.123496 1.48811 0 1.87502 0 2.33926C0 2.71425 0.163745 3.12061 0.491077 3.55809C0.818379 3.9956 1.1667 4.33938 1.53568 4.58934Z"
+									fill="white"
+								/>
+								<path
+									d="M15.107 5.54458C13.1549 6.86589 11.6725 7.89276 10.6608 8.62498C10.3215 8.87489 10.0462 9.06997 9.83487 9.20976C9.6235 9.34964 9.34239 9.49249 8.99113 9.63826C8.64 9.78424 8.31276 9.85701 8.00913 9.85701H8.00003H7.99105C7.68749 9.85701 7.36006 9.78424 7.00893 9.63826C6.6578 9.49249 6.3765 9.34964 6.16519 9.20976C5.95394 9.06997 5.67862 8.87489 5.33937 8.62498C4.53575 8.03574 3.05661 7.0088 0.901877 5.54458C0.562505 5.31854 0.26191 5.05944 0 4.76782V11.8569C0 12.25 0.139821 12.5862 0.419619 12.8659C0.699355 13.1458 1.03573 13.2857 1.42861 13.2857H14.5715C14.9643 13.2857 15.3006 13.1458 15.5804 12.8659C15.8603 12.5861 16 12.25 16 11.8569V4.76782C15.744 5.05341 15.4465 5.3125 15.107 5.54458Z"
+									fill="white"
+								/>
+							</svg>
+						</a>
+
+						<select class="lang-switcher">
+							<option value="en" selected>En</option>
+							<option value="ru">Ru</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="footer-bottom__wrapper">
+						<div class="footer-info">
+							<span class="contrast-header footer-bottom__contrast-header">Address:</span>
+
+							<ul class="footer-info__list">
+								<li class="footer-info__list-item">Nedre Slottsgate 4, 0157 Oslo, Norway SITA: OSLTSXH</li>
+							</ul>
+						</div>
+
+						<div class="footer-info">
+							<span class="contrast-header footer-bottom__contrast-header">Telephone:</span>
+
+							<ul class="footer-info__list">
+								<li class="footer-info__list-item">
+									<a href="tel:+4721661772" class="footer-info__list-link">+47 21 66 17 72; </a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer-info">
+							<span class="contrast-header footer-bottom__contrast-header">Mobile:</span>
+
+							<ul class="footer-info__list">
+								<li class="footer-info__list-item">
+									<a href="tel:+4799873069" class="footer-info__list-link">+47 998 73 069;</a>
+								</li>
+								<li class="footer-info__list-item">
+									<a href="tel:+4791763612" class="footer-info__list-link">+ 47 917 63 612</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer-info">
+							<span class="contrast-header footer-bottom__contrast-header">E-mail:</span>
+
+							<ul class="footer-info__list">
+								<li class="footer-info__list-item">
+									<a href="mail:info@titanair.no" class="footer-info__list-link footer-info__list-link--underline"
+										>info@titanair.no</a
+									>
+								</li>
+								<li class="footer-info__list-item">
+									<a href="mail:ops@titanair.no" class="footer-info__list-link footer-info__list-link--underline"
+										>ops@titanair.no</a
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer-socials">
+							<div class="footer-socials__wrapper">
+								<span class="contrast-header footer-bottom__contrast-header">SOCIAL NETWORKS:</span>
+
+								<div class="footer-socials__icons">
+									<a href="#" class="social-icon social-icon--yellow">
+										<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M9.47695 0.167479L7.34794 0.164062C4.95607 0.164062 3.41033 1.74995 3.41033 4.20453V6.06746H1.2697C1.08473 6.06746 0.934937 6.21742 0.934937 6.4024V9.10157C0.934937 9.28655 1.0849 9.43634 1.2697 9.43634H3.41033V16.2472C3.41033 16.4322 3.56012 16.582 3.7451 16.582H6.53801C6.72298 16.582 6.87278 16.432 6.87278 16.2472V9.43634H9.37567C9.56065 9.43634 9.71044 9.28655 9.71044 9.10157L9.71146 6.4024C9.71146 6.31358 9.6761 6.22853 9.61342 6.16567C9.55074 6.10282 9.46534 6.06746 9.37652 6.06746H6.87278V4.48823C6.87278 3.72919 7.05365 3.34387 8.04241 3.34387L9.47661 3.34335C9.66142 3.34335 9.81121 3.19339 9.81121 3.00858V0.502249C9.81121 0.317613 9.66159 0.16782 9.47695 0.167479Z"
+												fill="white"
+											/>
+										</svg>
+									</a>
+									<a href="#" class="social-icon social-icon--yellow">
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M12.0512 0.164062H4.69481C2.19662 0.164062 0.164185 2.1966 0.164185 4.69479V12.0512C0.164185 14.5494 2.19662 16.5819 4.69481 16.5819H12.0512C14.5496 16.5819 16.582 14.5493 16.582 12.0512V4.69479C16.5821 2.1966 14.5496 0.164062 12.0512 0.164062ZM15.1254 12.0512C15.1254 13.7462 13.7464 15.1252 12.0513 15.1252H4.69481C2.99983 15.1253 1.62085 13.7462 1.62085 12.0512V4.69479C1.62085 2.99981 2.99983 1.62073 4.69481 1.62073H12.0512C13.7463 1.62073 15.1253 2.99981 15.1253 4.69479V12.0512H15.1254Z"
+												fill="white"
+											/>
+											<path
+												d="M8.37303 4.14282C6.04033 4.14282 4.14258 6.04057 4.14258 8.37328C4.14258 10.7059 6.04033 12.6035 8.37303 12.6035C10.7057 12.6035 12.6035 10.7059 12.6035 8.37328C12.6035 6.04057 10.7057 4.14282 8.37303 4.14282ZM8.37303 11.1468C6.84363 11.1468 5.59925 9.90258 5.59925 8.37318C5.59925 6.84368 6.84353 5.59939 8.37303 5.59939C9.90253 5.59939 11.1468 6.84368 11.1468 8.37318C11.1468 9.90258 9.90244 11.1468 8.37303 11.1468Z"
+												fill="white"
+											/>
+											<path
+												d="M12.781 2.90747C12.5003 2.90747 12.2246 3.02109 12.0264 3.22017C11.8273 3.41828 11.7128 3.69407 11.7128 3.97569C11.7128 4.25644 11.8274 4.53214 12.0264 4.73122C12.2245 4.92933 12.5003 5.04392 12.781 5.04392C13.0626 5.04392 13.3374 4.92933 13.5365 4.73122C13.7356 4.53214 13.8492 4.25635 13.8492 3.97569C13.8492 3.69407 13.7356 3.41828 13.5365 3.22017C13.3384 3.02109 13.0626 2.90747 12.781 2.90747Z"
+												fill="white"
+											/>
+										</svg>
+									</a>
+									<a href="#" class="social-icon social-icon--yellow">
+										<svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M15.9422 1.5878C15.3495 0.883314 14.2554 0.595947 12.1657 0.595947H4.58039C2.44294 0.595947 1.33023 0.90185 0.739818 1.65188C0.164185 2.38317 0.164185 3.46066 0.164185 4.95194V7.7943C0.164185 10.6834 0.84717 12.1502 4.58039 12.1502H12.1658C13.9779 12.1502 14.982 11.8967 15.6317 11.275C16.2979 10.6374 16.5821 9.59646 16.5821 7.7943V4.95194C16.5821 3.37926 16.5376 2.29541 15.9422 1.5878ZM10.7045 6.76553L7.26006 8.56573C7.18305 8.60598 7.09884 8.62595 7.01474 8.62595C6.91952 8.62595 6.82451 8.60031 6.74035 8.54937C6.58189 8.45335 6.48513 8.2816 6.48513 8.09634V4.50749C6.48513 4.32255 6.58163 4.15095 6.73977 4.05488C6.89796 3.95881 7.09471 3.95224 7.25884 4.03751L10.7033 5.82611C10.8786 5.9171 10.9886 6.09801 10.9889 6.2954C10.9891 6.49294 10.8795 6.67412 10.7045 6.76553Z"
+												fill="white"
+											/>
+										</svg>
+									</a>
+									<a href="#" class="social-icon social-icon--yellow">
+										<svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M16.582 2.28294C15.9777 2.55069 15.3293 2.73228 14.6481 2.81335C15.3437 2.39682 15.8761 1.73613 16.1285 0.951293C15.476 1.33703 14.7558 1.61713 13.9884 1.76897C13.3739 1.11341 12.4998 0.705078 11.5303 0.705078C9.67026 0.705078 8.16214 2.21319 8.16214 4.07217C8.16214 4.33582 8.19189 4.59333 8.24935 4.83957C5.45063 4.699 2.96893 3.35812 1.30795 1.32061C1.01761 1.81717 0.852435 2.39577 0.852435 3.0134C0.852435 4.18194 1.44748 5.21299 2.3503 5.81622C1.79834 5.79776 1.27922 5.64592 0.82475 5.39354V5.4356C0.82475 7.06682 1.9861 8.42821 3.52601 8.73806C3.24387 8.81398 2.94636 8.85605 2.63858 8.85605C2.4211 8.85605 2.21078 8.8345 2.00456 8.79346C2.43338 10.1323 3.67683 11.1059 5.15007 11.1326C3.99794 12.0354 2.54523 12.572 0.967361 12.572C0.695499 12.572 0.427715 12.5555 0.164062 12.5258C1.65474 13.483 3.42447 14.0411 5.32653 14.0411C11.5221 14.0411 14.9087 8.9094 14.9087 4.45895L14.8974 4.02294C15.5591 3.55098 16.1316 2.958 16.582 2.28294Z"
+												fill="white"
+											/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p class="copyright__text">Copyright © 2020 Titan AirService</p>
+				</div>
+			</div>
+		</footer>
+		<script src="js/libs.min.js"></script>
+		<script type="module" src="js/main.js"></script>
+	</body>
+</html>
