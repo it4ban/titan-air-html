@@ -3,6 +3,7 @@ import { PageScroll } from './classes/PageScroll.js';
 import { Menu } from './classes/Menu.js';
 import { MainSlider } from './classes/MainSlider.js';
 import { NewsSlider } from './classes/NewsSlider.js';
+import { ModalForm } from './classes/ModalForm.js';
 
 $(() => {
 	const pageScroll = new PageScroll('#pagepiling');
@@ -10,11 +11,13 @@ $(() => {
 	const menu = new Menu();
 	const mainSlider = new MainSlider('#mainSlider');
 	const newsSlider = new NewsSlider('#newsSlider');
+	const modalForms = new ModalForm();
 
 	pageScroll.init();
 	search.init();
 	mainSlider.init();
 	newsSlider.init();
+	modalForms.init();
 
 	$('.header-toggle').on('click', () => {
 		$('.header').toggleClass('header--hidden');

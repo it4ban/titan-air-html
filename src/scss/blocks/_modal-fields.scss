@@ -1,0 +1,97 @@
+@use '../vars';
+
+.modal-field,
+.modal-area {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		padding: 0 50px;
+
+		@media (max-width: 798px) {
+			gap: 10px;
+		}
+
+		@media (max-width: 520px) {
+			padding: 0 20px;
+		}
+	}
+
+	&__input-wrapper {
+		grid-column: 7 span;
+
+		@media (max-width: 670px) {
+			grid-column: 12 span;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		border: 1px solid #b3b3b3;
+		border-radius: 3px;
+		padding: 0 35px 0 22px;
+		font-weight: 400;
+		color: vars.$blue;
+
+		transition: border 0.2s ease-in-out;
+
+		&:active,
+		&:focus {
+			border: 1px solid vars.$darkBlue;
+		}
+	}
+}
+
+.modal-field {
+	&__input-wrapper {
+		position: relative;
+
+		&:has(.error) {
+			.modal-field__input {
+				border-color: #ec3a3a;
+
+				&:active,
+				&:focus {
+					+ .error .error__message {
+						opacity: 1;
+						bottom: -38px;
+						z-index: 4;
+						width: 240px;
+
+						@media (max-width: 366px) {
+							width: 180px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__input {
+		height: 45px;
+	}
+}
+
+.modal-area {
+	&__wrapper {
+		@media (max-width: 520px) {
+			padding: 0 20px;
+		}
+	}
+
+	.field-header {
+		align-self: auto !important;
+	}
+
+	&__input {
+		grid-column: 7 span;
+		padding: 10px 22px 15px;
+		outline: none;
+		resize: none;
+
+		&__input {
+			@media (max-width: 670px) {
+				grid-column: 12 span;
+			}
+		}
+	}
+}

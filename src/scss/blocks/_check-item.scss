@@ -1,0 +1,45 @@
+@use '../vars';
+@use '../mixins';
+
+.check-item {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+
+	@media (max-width: 398px) {
+		gap: 12px;
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&__icon {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		border-radius: 3px;
+		background-color: transparent;
+		border: 1px solid #b3b3b3;
+		transition: all 0.2s ease-in-out;
+		user-select: none;
+
+		&--checked {
+			border-color: transparent;
+			background-color: vars.$blue;
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		color: vars.$blue;
+		text-align: left;
+
+		@media (max-width: 398px) {
+			font-size: 14px;
+		}
+	}
+}
